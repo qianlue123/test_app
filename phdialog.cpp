@@ -82,30 +82,34 @@ phDialog::phDialog(QWidget *parent)
 
     //Read account file for registration.
     QFile file("account.txt");
-     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)){
-         qDebug("unable to read configuration file, quit.");
-         return;
-    }
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)){
+        qDebug("unable to read configuration file, quit.");
+    }else {
+        // 读取文件中固定的前4行配置，分别对应 账户名、注册器、realm、密码
+        QByteArray line;
+        line = file.readLine();
+        accname=line;
+        accname=accname.trimmed();
 
-     QByteArray line;
-     line = file.readLine();
-     accname=line;
-     accname=accname.trimmed();
-     line = file.readLine();
-     QString registra=line;
-     registra=registra.trimmed();
-     line = file.readLine();
-     QString realm=line;
-     realm=realm.trimmed();
-     line = file.readLine();
-     QString password=line;
-     password=password.trimmed();
-     qt_add_account(accname.toLatin1().data(),registra.toLatin1().data(),realm.toLatin1().data(),password.toLatin1().data());
+        line = file.readLine();
+        QString registra=line;
+        registra=registra.trimmed();
+
+        line = file.readLine();
+        QString realm=line;
+        realm=realm.trimmed();
+
+        line = file.readLine();
+        QString password=line;
+        password=password.trimmed();
+
+        qt_add_account(accname.toLatin1().data(),registra.toLatin1().data(),realm.toLatin1().data(),password.toLatin1().data());
 
 
     file.close();
-
+    }
      //AddAccount("1228"); // qt_add_account(username);
+
      UpdateUI();//切换到初始页面，以后根据协议切换。
 
 }
