@@ -481,13 +481,20 @@ void phDialog::on_pushButton_12_clicked()
 
 void phDialog::on_pushButton_13_clicked()
 {
+    QString currNum = "";
     switch(m_callState){
-    case IDLE://DND
+    case IDLE:
+        //DND 空闲状态下的勿打扰功能切换
         m_DNDState=!m_DNDState;
         UpdateUI();
         break;
     case DIALING:
-        //delete the input in box.
+        // 拨号状态下对输入框操作，从尾部删除号码
+        currNum=ui->comboBox->currentText();
+        if (currNum.size() > 0) {
+            currNum = currNum.left(currNum.size() - 1);
+        }
+        ui->comboBox->setCurrentText(currNum);
         break;
     case RINGING:
         //mute.
