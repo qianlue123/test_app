@@ -1,0 +1,13 @@
+*.o
+*.so
+*.a
+
+realease/
+debug/
+
+# Qt-es
+*.pro.user
+*.pro.user.*
+
+moc_*.cpp
+moc_*.h

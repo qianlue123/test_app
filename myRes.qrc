@@ -1,0 +1,39 @@
+<RCC>
+    <qresource prefix="/">
+        <file>F:/Projects/PhoneIcons/Menu/高级设置.png</file>
+        <file>F:/Projects/PhoneIcons/Menu/功能图标.png</file>
+        <file>F:/Projects/PhoneIcons/Menu/话机状态.png</file>
+        <file>F:/Projects/PhoneIcons/Menu/基础设置.png</file>
+        <file>F:/Projects/PhoneIcons/Menu/联系人.png</file>
+        <file>F:/Projects/PhoneIcons/Menu/通话记录.png</file>
+        <file>F:/Projects/PhoneIcons/Menu/语音信息.png</file>
+        <file>F:/Projects/PhoneIcons/Secondary/弹窗注意图标.png</file>
+        <file>F:/Projects/PhoneIcons/Secondary/更多.png</file>
+        <file>F:/Projects/PhoneIcons/Secondary/呼出记录logo.png</file>
+        <file>F:/Projects/PhoneIcons/Secondary/录音中.png</file>
+        <file>F:/Projects/PhoneIcons/Secondary/搜索联系人图标.png</file>
+        <file>F:/Projects/PhoneIcons/Secondary/通话静音.png</file>
+        <file>F:/Projects/PhoneIcons/Secondary/未接记录.png</file>
+        <file>F:/Projects/PhoneIcons/Secondary/已接记录图标.png</file>
+        <file>F:/Projects/PhoneIcons/Secondary/暂停录制保持.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/USB.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/耳机图标.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/静音.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/留言角标logo.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/录音中.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/免打扰图标.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/首页警示logo.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/通话静音.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/网络信息.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/网络信息2.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/未接提示角标.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/未注册.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/响铃图标&amp;免提模式.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/暂停录制保持.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/摘机图标.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/振铃.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/注册成功.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/自动应答.png</file>
+        <file>F:/Projects/PhoneIcons/Statusbar/自动转接.png</file>
+    </qresource>
+</RCC>

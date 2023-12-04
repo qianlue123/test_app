@@ -1,0 +1,46 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Menu/AdvanceSettings.png</file>
+        <file>Menu/Contacts.png</file>
+        <file>Menu/Functions.png</file>
+        <file>Menu/History.png</file>
+        <file>Menu/Message.png</file>
+        <file>Menu/PhoneState.png</file>
+        <file>Menu/Settings.png</file>
+        <file>Secondary/Alert.png</file>
+        <file>Secondary/AnsCalls.png</file>
+        <file>Secondary/Callout.png</file>
+        <file>Secondary/More.png</file>
+        <file>Secondary/Mute.png</file>
+        <file>Secondary/Pause.png</file>
+        <file>Secondary/Recording.png</file>
+        <file>Secondary/Search.png</file>
+        <file>Secondary/unRecvCall.png</file>
+        <file>Statusbar/Alarm.png</file>
+        <file>Statusbar/autoreply.png</file>
+        <file>Statusbar/autoXfer.png</file>
+        <file>Statusbar/DND.png</file>
+        <file>Statusbar/Handsfree.png</file>
+        <file>Statusbar/Headphone.png</file>
+        <file>Statusbar/Msg.png</file>
+        <file>Statusbar/Mute.png</file>
+        <file>Statusbar/MutePhone.png</file>
+        <file>Statusbar/Netoff.png</file>
+        <file>Statusbar/NetOn.png</file>
+        <file>Statusbar/pauseRecording.png</file>
+        <file>Statusbar/phonepickup.png</file>
+        <file>Statusbar/Recording.png</file>
+        <file>Statusbar/Reg.png</file>
+        <file>Statusbar/ringing.png</file>
+        <file>Statusbar/UnrecvedFlag.png</file>
+        <file>Statusbar/Unreg.png</file>
+        <file>Statusbar/USB.png</file>
+        <file>animated0151.gif</file>
+        <file>animated0160.gif</file>
+        <file>animatedringing.gif</file>
+        <file>animated-telephone-image-0004.gif</file>
+        <file>animated-telephone-image-0031.gif</file>
+        <file>animated-telephone-image-0130.gif</file>
+        <file>animated-telephone-image-0136.gif</file>
+    </qresource>
+</RCC>
