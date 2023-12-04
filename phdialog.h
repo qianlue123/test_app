@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QMetaEnum>
+#include <QKeyEvent>
 #include "mywork.h"
 #include "QThread"
 #include "mycpp.h"

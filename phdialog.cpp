@@ -84,6 +84,8 @@ phDialog::phDialog(QWidget *parent)
     QFile file("account.txt");
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)){
         qDebug("unable to read configuration file, quit.");
+
+        AddAccount("1228"); // qt_add_account(username);
     }else {
         // 读取文件中固定的前4行配置，分别对应 账户名、注册器、realm、密码
         QByteArray line;
@@ -108,9 +110,8 @@ phDialog::phDialog(QWidget *parent)
 
     file.close();
     }
-     //AddAccount("1228"); // qt_add_account(username);
 
-     UpdateUI();//切换到初始页面，以后根据协议切换。
+    UpdateUI();//切换到初始页面，以后根据协议切换。
 
 }
 void phDialog::showAccounts()
@@ -126,8 +127,20 @@ phDialog::~phDialog()
     delete ui;
 }
 
+// 功能：设置进入功能的快捷键
 void phDialog::keyPressEvent(QKeyEvent *e){
-    m_callState=TODIAL;
+    // 按任意数字键或者C, 进入打电话界面
+    if (e->key() == 0x43 || (e->key() >= 0x30 && e->key() <= 0x39)) {
+        m_callState=TODIAL;
+    } else if (e->key() == 0x4d) {
+    // 按M 键盘打开菜单Menu
+        m_callState=IDLE;
+    } else if (e->key() == 0x50) {
+        // 按P 键盘打开通讯录
+    } else {
+        qDebug() << e->key();
+        m_callState=IDLE;
+    }
     UpdateUI();
 }
 
@@ -258,7 +271,8 @@ void phDialog::UpdateUI()//update UI according to the call state.
         ui->comboBox_2->addItem("1229");
         ui->comboBox_2->addItem("1230");
         ui->comboBox_2->addItem("1231");
-        ui->comboBox_2->setMinimumWidth(5);
+        ui->comboBox_2->addItem("1879");
+        ui->comboBox_2->setMinimumWidth(8);
         break;
     case DIALING:
         ui->labelAccount->setText("DIALING");
