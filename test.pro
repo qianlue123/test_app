@@ -14,39 +14,46 @@ CONFIG += c++17
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
-INCLUDEPATH += /usr/local/pjsip/include
-LIBS += -L /usr/local/pjsip/lib/
+INCLUDEPATH += $$PWD/../openwrt-2305/staging_dir/target-mipsel_24kc_glibc/usr/include
+LIBS += -L $$PWD/../openwrt-2305/staging_dir/target-mipsel_24kc_glibc/usr/lib/
+
+LIBS += -lpcre2-16
+
+LIBS += -lpjsua-mipsel-openwrt-linux-gnu
+LIBS += -lpjsip-ua-mipsel-openwrt-linux-gnu
+LIBS += -lpjsip-simple-mipsel-openwrt-linux-gnu
+LIBS += -lpjsip-mipsel-openwrt-linux-gnu
+LIBS += -lpjmedia-codec-mipsel-openwrt-linux-gnu
+LIBS += -lpjmedia-mipsel-openwrt-linux-gnu
+LIBS += -lpjmedia-videodev-mipsel-openwrt-linux-gnu
+LIBS += -lpjmedia-audiodev-mipsel-openwrt-linux-gnu
+LIBS += -lpjmedia-mipsel-openwrt-linux-gnu
+LIBS += -lpjnath-mipsel-openwrt-linux-gnu
+LIBS += -lpjlib-util-mipsel-openwrt-linux-gnu
+LIBS += -lpj-mipsel-openwrt-linux-gnu
+
+# 这些是编译 pjproject 时自带的第三方库
+LIBS += -lsrtp-mipsel-openwrt-linux-gnu
+LIBS += -lresample-mipsel-openwrt-linux-gnu
+LIBS += -lgsmcodec-mipsel-openwrt-linux-gnu
+LIBS += -lspeex-mipsel-openwrt-linux-gnu
+LIBS += -lilbccodec-mipsel-openwrt-linux-gnu
+LIBS += -lg7221codec-mipsel-openwrt-linux-gnu
+LIBS += -lyuv-mipsel-openwrt-linux-gnu
+LIBS += -lwebrtc-mipsel-openwrt-linux-gnu
+
+LIBS += $$PWD/../openwrt-2305/staging_dir/toolchain-mipsel_24kc_gcc-13.1.0_glibc/lib/librt.a
+# 这两个库默认的musl系列交叉工具链编译出来的openwrt没有，必须glibc才有
+LIBS += $$PWD/../openwrt-2305/staging_dir/toolchain-mipsel_24kc_gcc-13.1.0_glibc/lib/libm.so
+LIBS += $$PWD/../openwrt-2305/staging_dir/toolchain-mipsel_24kc_gcc-13.1.0_glibc/lib/libc.so
+
+LIBS += $$PWD/../openwrt-2305/staging_dir/target-mipsel_24kc_glibc/usr/lib/libssl.so
+LIBS += $$PWD/../openwrt-2305/staging_dir/target-mipsel_24kc_glibc/usr/lib/libcrypto.so
+
+# 必须在 openwrt make menuconfig 选上 alsa-lib 才会出现
+LIBS += $$PWD/../openwrt-2305/staging_dir/target-mipsel_24kc_glibc/usr/lib/libasound.so
 
 
-LIBS += -lpjsua-x86_64-unknown-linux-gnu
-LIBS += -lpjsip-ua-x86_64-unknown-linux-gnu
-LIBS += -lpjsip-simple-x86_64-unknown-linux-gnu
-LIBS += -lpjsip-x86_64-unknown-linux-gnu
-LIBS += -lpjmedia-codec-x86_64-unknown-linux-gnu
-LIBS += -lpjmedia-x86_64-unknown-linux-gnu
-LIBS += -lpjmedia-videodev-x86_64-unknown-linux-gnu
-LIBS += -lpjmedia-audiodev-x86_64-unknown-linux-gnu
-LIBS += -lpjmedia-x86_64-unknown-linux-gnu
-LIBS += -lpjnath-x86_64-unknown-linux-gnu
-LIBS += -lpjlib-util-x86_64-unknown-linux-gnu
-LIBS += -lsrtp-x86_64-unknown-linux-gnu
-LIBS += -lresample-x86_64-unknown-linux-gnu
-LIBS += -lgsmcodec-x86_64-unknown-linux-gnu
-LIBS += -lspeex-x86_64-unknown-linux-gnu
-LIBS += -lilbccodec-x86_64-unknown-linux-gnu
-LIBS += -lg7221codec-x86_64-unknown-linux-gnu
-LIBS += -lyuv-x86_64-unknown-linux-gnu
-LIBS += -lwebrtc-x86_64-unknown-linux-gnu
-LIBS += -lpj-x86_64-unknown-linux-gnu
-
-
-
-LIBS += /usr/lib/x86_64-linux-gnu/libssl.so
-LIBS += /usr/lib/x86_64-linux-gnu/libcrypto.so
-LIBS += /usr/lib/x86_64-linux-gnu/libm.so
-LIBS += /usr/lib/x86_64-linux-gnu/librt.a
-LIBS += /usr/lib/x86_64-linux-gnu/libasound.so
-LIBS += /usr/lib/x86_64-linux-gnu/libc.so
 SOURCES += \
     formactivecalls.cpp \
     main.cpp \
